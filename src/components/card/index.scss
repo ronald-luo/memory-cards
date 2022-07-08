@@ -1,13 +1,22 @@
 .card {
     display: block;
-    background-color: blue;
     color: white;
-    width: 200px;
-    height: 250px;
+    width: 150px;
+    height: 220px;
     text-align: center;
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     justify-self: center;
+    padding: 30px 5px;
+    background-color: rgb(39, 64, 128);
+    border-radius: 15px;
+
+    h2 {
+        font-family: "Poppins";
+        align-self: center;
+        font-size: 20px;
+    }
 
     &:hover {
         cursor: pointer;
@@ -17,9 +26,6 @@
 .card-img {
     object-fit: cover;
     max-height: 100%;;
-    width: auto;
-}
-
-h2 {
-    align-self: center;
+    width: 50%;;
+    margin: auto;
 }
