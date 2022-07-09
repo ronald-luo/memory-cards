@@ -56,6 +56,8 @@ function App() {
         setStorage(
           {
             ...storage,
+            "current_score": storage.current_score + 1,
+            "best_score": Math.max(storage.current_score + 1, storage.best_score),
             "seen": new Set()
           }
         )
@@ -72,10 +74,10 @@ function App() {
       </h1>
 
       <p>
-        Click on all the villagers, but don't click on anyone twice. Good luck!
+        Click on all the villagers without clicking on anyone twice. <br/> You can keep going once everyone has been clicked on once. Good luck!
       </p>
 
-      <p class="score">Score: {storage.current_score} | Best: {storage.best_score}</p>
+      <p className="score">Score: {storage.current_score} | Best: {storage.best_score}</p>
 
       <div className="card-container">
         {storage.arr.map(id => {
